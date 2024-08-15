@@ -1,20 +1,20 @@
 
 
 function validate(){
-    let name = document.getElementById('name').value;
+    let name = document.getElementById('name').value.trim();
     if(name==""){
         document.getElementById('valName').innerHTML="Please Enter Your Name";
         return false;
     }
     let email = document.getElementById('email').value;
-    let reg =/^([a-zA-Z0-9\._]+)@([a-zA-Z0-9])+.([a-z]+)(.[a-z]+)?$/;
+    let reg =/^([a-zA-Z0-9._]+)@([a-zA-Z0-9])+\.([a-z]+)(.[a-z]+)?$/;
     let result= reg.test(email);
 
     if(result==false){
         document.getElementById('valemail').innerHTML="Enter A Valid Email";
         return false;
     }
-    let subject = document.getElementById('subject').value;
+    let subject = document.getElementById('subject').value.trim();
     if(subject==""){
         document.getElementById('valSubject').innerHTML="Please Fill This Field";
         return false;
