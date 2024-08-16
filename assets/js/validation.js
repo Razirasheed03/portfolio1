@@ -2,7 +2,7 @@
 
 function validate(){
     let name = document.getElementById('name').value.trim();
-    let reg1 =/^[a-zA-z ]+$/;
+    let reg1 =/^[a-zA-Z ]+$/;
     let result1= reg1.test(name);
 
     if(result1==false){
