@@ -2,8 +2,11 @@
 
 function validate(){
     let name = document.getElementById('name').value.trim();
-    if(name==""){
-        document.getElementById('valName').innerHTML="Please Enter Your Name";
+    let reg1 =/^[a-zA-z ]+$/;
+    let result1= reg1.test(name);
+
+    if(result1==false){
+        alert("Enter a Valid Name")
         return false;
     }
     let email = document.getElementById('email').value;
@@ -11,15 +14,23 @@ function validate(){
     let result= reg.test(email);
 
     if(result==false){
-        document.getElementById('valemail').innerHTML="Enter A Valid Email";
+        // document.getElementById('valemail').innerHTML="Enter A Valid Email";
+        alert("Enter a Valid Email")
         return false;
     }
     let subject = document.getElementById('subject').value.trim();
     if(subject==""){
-        document.getElementById('valSubject').innerHTML="Please Fill This Field";
+        // document.getElementById('valSubject').innerHTML="Please Fill This Field";
+        alert("Please Add Subject")
         return false;
-    }
+    } 
     
     return true;
 
 }
+
+    
+    return true;
+
+}
+
