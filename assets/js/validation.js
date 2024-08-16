@@ -2,7 +2,7 @@
 
 function validate(){
     let name = document.getElementById('name').value.trim();
-    let reg1 =/^[a-zA-Z ]+$/;
+    let reg1 =/^[a-zA-z ]+$/;
     let result1= reg1.test(name);
 
     if(result1==false){
@@ -24,11 +24,6 @@ function validate(){
         alert("Please Add Subject")
         return false;
     } 
-    
-    return true;
-
-}
-
     
     return true;
 
